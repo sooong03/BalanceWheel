@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/menu_navi_dashboard"
+        android:icon="@drawable/ic_mbri_dashboard"/>
+
+    <item android:title="@string/menu_navi_share_list"
+        android:icon="@drawable/ic_mbri_globe"/>
+
+    <item android:title="@string/menu_navi_add_content"
+        android:icon="@drawable/ic_mbri_edit"/>
+
+    <item android:title="@string/menu_navi_inventory"
+        android:icon="@drawable/ic_mbri_inventory"/>
+
+    <item android:title="@string/menu_navi_setting"
+        android:icon="@drawable/ic_mbri_setting"/>
+</menu>
