@@ -11,17 +11,20 @@ public class MainActivity extends AppCompatActivity {
     private ActionBar actionBar;
     private Intent intent;
 
+    private DashboardFragment dashboard;
+
     private TabLayout tabLayout;
     private TabLayout.OnTabSelectedListener listener=new TabLayout.OnTabSelectedListener() {
         @Override
         public void onTabSelected(TabLayout.Tab tab) {
             switch (tab.getPosition()){
                 case 0:
-                    startActivity(intent);
+                    getSupportFragmentManager().beginTransaction().show(dashboard).commit();
                     break;
                 case 1:
                     break;
                 case 2:
+                    startActivity(intent);
                     break;
                 case 3:
                     break;
@@ -47,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         intent=new Intent();
+        dashboard=new DashboardFragment();
+
         findID();
     } // on Create
 

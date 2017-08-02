@@ -99,5 +99,8 @@
     <!--Notice-->
     <string name="noti_no_account">일부 기능 사용에 제한이 생깁니다.\n그대로 진행하시겠습니까?</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
