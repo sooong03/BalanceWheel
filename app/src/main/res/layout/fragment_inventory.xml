@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="kr.anima.xd.s.a170802_balancewheel.InventoryFragment"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/view_total"
+        android:layout_width="@dimen/ic_176dp"
+        android:layout_height="@dimen/ic_176dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        app:cardCornerRadius="@dimen/_4dp">
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/view_tracker_open"
+        android:layout_width="wrap_content"
+        android:layout_height="86dp"
+        android:layout_toRightOf="@id/view_total"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/_8dp"
+        android:layout_marginBottom="2dp"
+        app:cardCornerRadius="@dimen/_4dp">
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/view_tracker_all"
+        android:layout_width="wrap_content"
+        android:layout_height="86dp"
+        android:layout_toRightOf="@id/view_total"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/view_tracker_open"
+        android:layout_marginLeft="@dimen/_8dp"
+        android:layout_marginTop="2dp"
+        app:cardCornerRadius="@dimen/_4dp">
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/layout_event"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ic_72dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/view_total"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="5">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3.5"
+                android:src="@drawable/ic_mbri_globe"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/_4dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/inven_level"
+                android:textSize="@dimen/typo_btn"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="5">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3.5"
+                android:src="@drawable/ic_mbri_globe"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/_4dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/inven_storage"
+                android:textSize="@dimen/typo_btn"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="5">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3.5"
+                android:src="@drawable/ic_mbri_globe"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/_4dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/inven_event"
+                android:textSize="@dimen/typo_btn"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_mission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_event">
+
+    </ListView>
+
+</RelativeLayout>
