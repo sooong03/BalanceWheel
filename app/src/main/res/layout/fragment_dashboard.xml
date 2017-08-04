@@ -1,26 +1,29 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="kr.anima.xd.s.a170802_balancewheel.DashboardFragment">
+    tools:context="kr.anima.xd.s.a170802_balancewheel.DashboardFragment"
+    app:theme="@style/MyAppTheme.NoActionBar"
+    android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/view_dash_recycler"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="@dimen/_8dp"
-        app:layoutManager="android.support.v7.widget.StaggeredGridLayoutManager">
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/layout_dash_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/myColorPrimary">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
 
-    </android.support.v7.widget.RecyclerView>
+    <FrameLayout
+        android:id="@+id/view_dash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:fabSize="mini"
-        android:src="@drawable/ic_mbri_layout"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="@dimen/_16dp"/>
+    </FrameLayout>
 
-</RelativeLayout>
+
+</LinearLayout>

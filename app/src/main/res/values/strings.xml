@@ -35,6 +35,10 @@
     <!--My Share List-->
     <string name="share_downloads">공유받은 일정</string>
     <string name="share_share_content">공유중인 일정</string>
+    <string name="share_my_list">나의 목록</string>
+    <string name="share_search">검색</string>
+    <string name="share_refresh">새로고침</string>
+    <string name="share_upload">새 일정 공유</string>
 
     <!--Add Content-->
     <string name="content_task_title">제목</string>

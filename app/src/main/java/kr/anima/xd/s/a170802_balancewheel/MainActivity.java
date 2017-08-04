@@ -2,8 +2,17 @@ package kr.anima.xd.s.a170802_balancewheel;
 
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.view.menu.MenuBuilder;
+import android.support.v7.widget.Toolbar;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
             switch (tab.getPosition()){
                 case 0:
                     getSupportFragmentManager().beginTransaction().replace(R.id.view_main, dashboard).commit();
+                    if(dashboard.isAdded()) return;
                     break;
                 case 1:
                     getSupportFragmentManager().beginTransaction().replace(R.id.view_main, shareList).commit();
@@ -60,12 +70,8 @@ public class MainActivity extends AppCompatActivity {
         setting=new SettingFragment();
 
         findID();
-        getSupportFragmentManager().beginTransaction()
-                .add(dashboard, "dashboard").add(shareList, "sharelist").add(inventory, "inventory").add(setting, "setting")
-                .replace(R.id.view_main, dashboard)
-                .commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.view_main, dashboard).commit();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     } // on Create
 
     public void findID(){
