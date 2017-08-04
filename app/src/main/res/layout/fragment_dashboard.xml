@@ -6,9 +6,11 @@
     tools:context="kr.anima.xd.s.a170802_balancewheel.DashboardFragment">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/layout_recycler"
+        android:id="@+id/view_dash_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="@dimen/_8dp"
+        app:layoutManager="android.support.v7.widget.StaggeredGridLayoutManager">
 
     </android.support.v7.widget.RecyclerView>
 
