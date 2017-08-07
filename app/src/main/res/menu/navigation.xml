@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:title="@string/menu_navi_dashboard"
-        android:icon="@drawable/ic_mbri_dashboard"/>
+        android:icon="@drawable/ic_mbri_dashboard"
+        app:showAsAction="always"/>
 
     <item android:title="@string/menu_navi_share_list"
-        android:icon="@drawable/ic_mbri_globe"/>
+        android:icon="@drawable/ic_mbri_globe"
+        app:showAsAction="always"/>
 
     <item android:title="@string/menu_navi_add_content"
-        android:icon="@drawable/ic_mbri_edit"/>
+        android:icon="@drawable/ic_mbri_edit"
+        app:showAsAction="always"/>
 
     <item android:title="@string/menu_navi_inventory"
-        android:icon="@drawable/ic_mbri_inventory"/>
+        android:icon="@drawable/ic_mbri_inventory"
+        app:showAsAction="always"/>
 
     <item android:title="@string/menu_navi_setting"
-        android:icon="@drawable/ic_mbri_setting"/>
+        android:icon="@drawable/ic_mbri_setting"
+        app:showAsAction="always"/>
 </menu>

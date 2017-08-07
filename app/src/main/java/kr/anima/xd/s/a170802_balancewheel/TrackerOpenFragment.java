@@ -31,6 +31,7 @@ public class TrackerOpenFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.dashboard_tracker_open, container, false);
+
         tabLayout=view.findViewById(R.id.layout_tab);
         pager=view.findViewById(R.id.tracker_open_pager);
         pager.setAdapter(adapter);

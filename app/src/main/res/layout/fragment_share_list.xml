@@ -26,8 +26,12 @@
             android:id="@+id/view_share_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="@dimen/_8dp"
-            app:layoutManager="android.support.v7.widget.GridLayoutManager"
+            android:padding="@dimen/_4dp"
+            app:spanCount="2"
+            app:reverseLayout="true"
+            app:layout_insetEdge="start"
+            android:orientation="vertical"
+            app:layoutManager="android.support.v7.widget.StaggeredGridLayoutManager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         </android.support.v7.widget.RecyclerView>

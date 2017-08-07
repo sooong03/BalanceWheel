@@ -23,4 +23,10 @@
         <item name="colorAccent">@color/myColorAccent</item>
     </style>
 
+    <!--BTN style-->
+    <style name="MyAppTheme.Btn">
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">clickBtn</item>
+    </style>
+
 </resources>

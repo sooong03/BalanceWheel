@@ -11,7 +11,7 @@ public class TrackerOpenPagerAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 0;
     }
 
     @Override

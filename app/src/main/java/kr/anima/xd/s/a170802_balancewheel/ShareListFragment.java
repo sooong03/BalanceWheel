@@ -1,6 +1,7 @@
 package kr.anima.xd.s.a170802_balancewheel;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
@@ -19,14 +20,19 @@ import android.view.ViewGroup;
  */
 public class ShareListFragment extends Fragment {
 
+    private Context context;
+
     private Toolbar toolbar;
     private RecyclerView recyclerView;
     private ShareListAdapter adapter;
 
-
     public ShareListFragment() {
+    }
+
+    public ShareListFragment(Context context) {
         // Required empty public constructor
-        adapter=new ShareListAdapter();
+        this.context=context;
+        adapter=new ShareListAdapter(context);
     }
 
 
@@ -39,17 +45,19 @@ public class ShareListFragment extends Fragment {
         recyclerView=view.findViewById(R.id.view_share_recycler);
         recyclerView.setAdapter(adapter);
 
+//      add animation at add recycler item
+//        recyclerView.setItemAnimator();
+
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
         ActionBar actionBar=((AppCompatActivity) getActivity()).getSupportActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setDisplayShowCustomEnabled(true);
         View viewTool=getActivity().getLayoutInflater().inflate(R.layout.toolbar_share_list, null);
-        actionBar.setCustomView(viewTool, new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-//        toolbar.setNavigationIcon(R.drawable.ic_tracker);
-//        toolbar.setNavigationOnClickListener(listener);
+        actionBar.setCustomView(viewTool);
 
         return view;
     }
+
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {

@@ -12,7 +12,7 @@
         android:id="@+id/view_main"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9">
+        android:layout_weight="9.2">
 
     </RelativeLayout>
 
@@ -20,38 +20,35 @@
         android:id="@+id/layout_tab"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
         android:layout_gravity="bottom"
         app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabIndicatorHeight="0dp"
         >
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/menu_navi_dashboard"
-            android:icon="@drawable/ic_mbri_dashboard"
+            android:icon="@drawable/ic_select_dashboard"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/menu_navi_share_list"
             android:icon="@drawable/ic_mbri_globe"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/menu_navi_add_content"
             android:icon="@drawable/ic_mbri_edit"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/menu_navi_inventory"
             android:icon="@drawable/ic_mbri_inventory"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/menu_navi_setting"
             android:icon="@drawable/ic_mbri_setting"
             />
     </android.support.design.widget.TabLayout>
