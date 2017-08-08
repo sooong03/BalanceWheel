@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:title="@string/menu_navi_dashboard"
-        android:icon="@drawable/ic_mbri_dashboard"
+        android:icon="@drawable/ic_navi_dashboard"
         app:showAsAction="always"/>
 
     <item android:title="@string/menu_navi_share_list"
-        android:icon="@drawable/ic_mbri_globe"
+        android:icon="@drawable/ic_navi_globe"
         app:showAsAction="always"/>
 
     <item android:title="@string/menu_navi_add_content"
-        android:icon="@drawable/ic_mbri_edit"
+        android:icon="@drawable/ic_navi_edit"
         app:showAsAction="always"/>
 
     <item android:title="@string/menu_navi_inventory"
-        android:icon="@drawable/ic_mbri_inventory"
+        android:icon="@drawable/ic_navi_inventory"
         app:showAsAction="always"/>
 
     <item android:title="@string/menu_navi_setting"
-        android:icon="@drawable/ic_mbri_setting"
+        android:icon="@drawable/ic_navi_setting"
         app:showAsAction="always"/>
 </menu>

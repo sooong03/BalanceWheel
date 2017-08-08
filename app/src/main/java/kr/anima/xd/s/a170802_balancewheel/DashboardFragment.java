@@ -5,7 +5,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -14,26 +15,30 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DashboardFragment extends Fragment {
+public class DashboardFragment extends Fragment implements View.OnClickListener{
 
     private Context context;
 
-    private RelativeLayout layout;
     private Toolbar toolbar;
+    private ToggleButton btn_tracker;
+    private ToggleButton btn_calendar;
     private Fragment[] dashboard=new Fragment[3];
 
     private View.OnClickListener listener=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+
             getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[0]).commit();
-    }
+
+        }
     };
 
     public DashboardFragment() {
@@ -47,50 +52,48 @@ public class DashboardFragment extends Fragment {
         dashboard[2]=new CalendarFragment();
     }
 
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
-
-    }
-
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.dashboard, menu);
-        super.onCreateOptionsMenu(menu, inflater);
-
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[1]).commit();
         View view=inflater.inflate(R.layout.fragment_dashboard, container, false);
 
-        layout=view.findViewById(R.id.view_root_dash);
         // TODO : View Transition
         toolbar=view.findViewById(R.id.layout_dash_toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
-        toolbar.setNavigationOnClickListener(listener);
-        toolbar.setTitle(""); //TODO : DATE
+        ActionBar actionBar=((AppCompatActivity) getActivity()).getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayShowCustomEnabled(true);
+        btn_tracker=view.findViewById(R.id.btn_tracker);
+        btn_calendar=view.findViewById(R.id.btn_calendar);
+        btn_tracker.setOnClickListener(this);
+        btn_calendar.setOnClickListener(this);
+
+         //TODO : DATE
 
         return view;
     } // on CreateView
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()){
-            case R.id.menu_calendar:
-                getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[2]).commit();
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId()){
+            case R.id.btn_tracker:
+                if(btn_tracker.isChecked()) getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[0]).commit();
+                else getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[1]).commit();
+
+                break;
+            case R.id.btn_calendar:
+                if(!btn_calendar.isChecked()) getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[1]).commit();
+                else getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[2]).commit();
                 break;
         }
-        return super.onOptionsItemSelected(item);
-    }
+
+    } // onClick
+
+
 
 
 } // class Dashboard Fragment

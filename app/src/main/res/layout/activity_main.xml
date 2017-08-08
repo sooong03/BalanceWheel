@@ -12,16 +12,14 @@
         android:id="@+id/view_main"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9.2">
+        android:layout_weight="10">
 
     </RelativeLayout>
 
     <android.support.design.widget.TabLayout
         android:id="@+id/layout_tab"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8"
-        android:layout_gravity="bottom"
+        android:layout_height="@dimen/ic_48dp"
         app:tabGravity="fill"
         app:tabMode="fixed"
         app:tabIndicatorHeight="0dp"
@@ -29,27 +27,27 @@
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_select_dashboard"
+            android:icon="@drawable/ic_navi_dashboard"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_mbri_globe"
+            android:icon="@drawable/ic_navi_globe"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_mbri_edit"
+            android:icon="@drawable/ic_navi_edit"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_mbri_inventory"
+            android:icon="@drawable/ic_navi_inventory"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_mbri_setting"
+            android:icon="@drawable/ic_navi_setting"
             />
     </android.support.design.widget.TabLayout>
 

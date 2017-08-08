@@ -27,8 +27,11 @@
             android:theme="@style/MyAppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/MyAppTheme.NoActionBar"></activity>
-        <activity android:name=".SharedItemActivity"
+            android:theme="@style/MyAppTheme.NoActionBar" />
+        <activity
+            android:name=".SharedItemActivity"
+            android:theme="@style/MyAppTheme.NoActionBar" />
+        <activity android:name=".AddContentActivity"
             android:theme="@style/MyAppTheme.NoActionBar"></activity>
     </application>
 

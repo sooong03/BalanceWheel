@@ -11,5 +11,7 @@
     <color name="myColorBase">#22b8cf</color>
     <color name="myColorText">#212121</color>
 
+    <color name="White">#FFFFFF</color>
+
 
 </resources>

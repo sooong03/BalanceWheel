@@ -54,6 +54,7 @@
     <string name="content_no_alarm">알림없음</string>
     <string name="content_btn_ok">저장</string>
     <string name="content_btn_cancel">취소</string>
+    <string name="content_element">요소</string>
 
     <!--Inventory-->
     <string name="inven_tracker_open">즐겨찾는 트래커</string>

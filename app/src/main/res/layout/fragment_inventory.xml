@@ -60,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3.5"
-                android:src="@drawable/ic_mbri_globe"
+                app:srcCompat="@drawable/ic_navi_globe"
                 android:scaleType="fitCenter"
                 android:padding="@dimen/_4dp"/>
             <TextView
@@ -83,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3.5"
-                android:src="@drawable/ic_mbri_globe"
+                app:srcCompat="@drawable/ic_navi_globe"
                 android:scaleType="fitCenter"
                 android:padding="@dimen/_4dp"/>
             <TextView
@@ -106,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3.5"
-                android:src="@drawable/ic_mbri_globe"
+                app:srcCompat="@drawable/ic_navi_globe"
                 android:scaleType="fitCenter"
                 android:padding="@dimen/_4dp"/>
             <TextView

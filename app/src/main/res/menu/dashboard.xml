@@ -10,6 +10,7 @@
     <item android:id="@+id/menu_calendar"
         android:title="@string/set_device_calendar"
         android:icon="@drawable/ic_expand_more"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"
+        />
 
 </menu>
