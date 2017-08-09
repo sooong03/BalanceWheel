@@ -45,5 +45,11 @@
         <item name="android:clickable">true</item>
         <item name="android:checked">false</item>
     </style>
+
+    <style name="CardView.Inventory">
+        <item name="android:layout_margin">@dimen/_2dp</item>
+        <item name="cardElevation">@dimen/_2dp</item>
+        <item name="cardCornerRadius">@dimen/_2dp</item>
+    </style>
     
 </resources>
