@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="set_account">
+        <item>@string/set_account</item>
+        <item>@string/set_account</item>
+        <item>@string/set_account</item>
+    </string-array>
+
+    <string-array name="set_display">
+        <item>@string/set_device_calendar</item>
+        <item>@string/set_device_calendar</item>
+        <item>@string/set_device_calendar</item>
+        <item>@string/set_device_calendar</item>
+        <item>@string/set_device_calendar</item>
+    </string-array>
+
+</resources>

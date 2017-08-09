@@ -6,14 +6,21 @@
     tools:context="kr.anima.xd.s.a170802_balancewheel.SettingFragment"
     >
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/view_setting_recycler"
+    <ListView
+        android:id="@+id/list_setting"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/_4dp"
-        app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+        >
 
-    </android.support.v7.widget.RecyclerView>
+    </ListView>
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/view_setting_recycler"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="@dimen/_4dp"-->
+        <!--app:layoutManager="android.support.v7.widget.LinearLayoutManager">-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
 
 
 </LinearLayout>

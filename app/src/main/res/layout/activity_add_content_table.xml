@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="kr.anima.xd.s.a170802_balancewheel.AddContentActivity"
+    android:showDividers="beginning"
+    android:divider="@color/myColorText"
+    android:padding="@dimen/_4dp">
+
+    <TableRow
+        style="@style/MyAppTheme.TableRow">
+        <EditText
+            android:hint="@string/content_mission"
+            android:inputType="text"
+            android:ems="20"
+            android:layout_span="3"/>
+    </TableRow>
+
+    <TableRow
+        style="@style/MyAppTheme.TableRow">
+        <TextView
+            android:layout_span="1"
+            android:text="@string/content_mission"/>
+        <Spinner
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow
+        style="@style/MyAppTheme.TableRow">
+        <CheckBox
+            android:layout_span="1"/>
+        <CheckBox
+            android:layout_span="1"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_span="1"
+            android:text="@string/content_date_start"/>
+        <TextView
+            android:layout_span="1"
+            android:text="@string/content_date_start"/>
+        <TextView
+            android:layout_span="1"
+            android:text="@string/content_date_start"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_span="1"
+            android:text="@string/content_date_end"/>
+        <TextView
+            android:layout_span="1"
+            android:text="@string/content_date_end"/>
+        <TextView
+            android:layout_span="1"
+            android:text="@string/content_date_end"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_span="1"
+            android:text="@string/content_cycle"/>
+        <CheckBox
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow>
+        <Spinner>
+
+        </Spinner>
+        <TextView
+            android:text="@string/content_cycle"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="@string/content_element"/>
+        <android.support.v7.widget.RecyclerView/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="@string/content_alarm"/>
+        <CheckBox />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="@string/content_alarm"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="@string/content_btn_cancel"/>
+        <TextView
+            android:text="@string/content_btn_ok"/>
+    </TableRow>
+
+
+
+</TableLayout>

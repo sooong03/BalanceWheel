@@ -1,6 +1,7 @@
 package kr.anima.xd.s.a170802_balancewheel;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -21,9 +22,14 @@ public class TrackerOpenFragment extends Fragment {
     private TabLayout tabLayout;
     private ViewPager pager;
     private TrackerOpenPagerAdapter adapter;
+    private Context context;
 
     public TrackerOpenFragment() {
-        adapter=new TrackerOpenPagerAdapter();
+    }
+
+    public TrackerOpenFragment(Context context) {
+        this.context=context;
+        adapter=new TrackerOpenPagerAdapter(context);
     }
 
 
@@ -32,7 +38,7 @@ public class TrackerOpenFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.dashboard_tracker_open, container, false);
 
-        tabLayout=view.findViewById(R.id.layout_tab);
+        tabLayout=view.findViewById(R.id.layout_tab_tracker);
         pager=view.findViewById(R.id.tracker_open_pager);
         pager.setAdapter(adapter);
         tabLayout.setupWithViewPager(pager);

@@ -1,6 +1,7 @@
 package kr.anima.xd.s.a170802_balancewheel;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,11 +14,14 @@ import android.view.ViewGroup;
  */
 public class DashboardListFragment extends Fragment {
 
+    Context context;
 
     public DashboardListFragment() {
-        // Required empty public constructor
     }
 
+    public DashboardListFragment(Context context) {
+        this.context = context;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

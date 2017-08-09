@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/menu_set_account">
+        <item android:id="@+id/menu_account"
+            android:title="@string/set_account"/>
+        <item android:title="@string/set_password"/>
+        <item android:title="@string/set_data"/>
+    </group>
+
+    <group android:id="@+id/menu_set_display">
+        <item android:title="@string/set_start_day"/>
+        <item android:title="@string/content_date_lunar_calendar"/>
+        <item android:title="@string/set_device_calendar"/>
+        <item android:title="@string/set_auto_save"/>
+    </group>
+
+    <group android:id="@+id/menu_set_content">
+        <item android:title="@string/set_weather"/>
+        <item android:title="@string/set_diary"/>
+        <item android:title="@string/set_photo"/>
+    </group>
+
+    <group android:id="@+id/menu_set_admin">
+        <item android:title="@string/set_admin_qna"/>
+        <item android:title="@string/set_admin"/>
+    </group>
+
+</menu>
