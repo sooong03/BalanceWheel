@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         dashboard=new DashboardFragment(this);
         shareList=new ShareListFragment(this);
         inventory=new InventoryFragment();
-        setting=new SettingFragment();
+        setting=new SettingFragment(this);
 
         findID();
         getSupportFragmentManager().beginTransaction().replace(R.id.view_main, dashboard).commit();

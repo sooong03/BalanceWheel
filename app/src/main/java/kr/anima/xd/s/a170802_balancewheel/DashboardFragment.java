@@ -32,24 +32,15 @@ public class DashboardFragment extends Fragment implements View.OnClickListener{
     private ToggleButton btn_calendar;
     private Fragment[] dashboard=new Fragment[3];
 
-    private View.OnClickListener listener=new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-
-            getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[0]).commit();
-
-        }
-    };
-
     public DashboardFragment() {
         // Required empty public constructor
     } // Constructor
 
     public DashboardFragment(Context context) {
         this.context = context;
-        dashboard[0]=new TrackerOpenFragment();
-        dashboard[1]=new DashboardListFragment();
-        dashboard[2]=new CalendarFragment();
+        dashboard[0]=new TrackerOpenFragment(context);
+        dashboard[1]=new DashboardListFragment(context);
+        dashboard[2]=new CalendarFragment(context);
     }
 
     @Override
@@ -70,7 +61,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener{
         btn_tracker.setOnClickListener(this);
         btn_calendar.setOnClickListener(this);
 
-         //TODO : DATE
+        //TODO : DATE
 
         return view;
     } // on CreateView
@@ -81,13 +72,19 @@ public class DashboardFragment extends Fragment implements View.OnClickListener{
 
         switch (view.getId()){
             case R.id.btn_tracker:
-                if(btn_tracker.isChecked()) getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[0]).commit();
+                btn_calendar.setChecked(false);
+                if(btn_tracker.isChecked()) {
+                    getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[0]).commit();
+                }
                 else getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[1]).commit();
 
                 break;
             case R.id.btn_calendar:
-                if(!btn_calendar.isChecked()) getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[1]).commit();
-                else getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[2]).commit();
+                btn_tracker.setChecked(false);
+                if(btn_calendar.isChecked()) {
+                    getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[2]).commit();
+                }
+                else getChildFragmentManager().beginTransaction().replace(R.id.view_dash, dashboard[1]).commit();
                 break;
         }
 
