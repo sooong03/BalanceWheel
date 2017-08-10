@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         intent=new Intent();
         dashboard=new DashboardFragment(this);
         shareList=new ShareListFragment(this);
-        inventory=new InventoryFragment();
+        inventory=new InventoryFragment(this);
         setting=new SettingFragment(this);
 
         findID();

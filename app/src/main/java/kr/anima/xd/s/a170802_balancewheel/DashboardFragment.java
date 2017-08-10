@@ -2,6 +2,8 @@ package kr.anima.xd.s.a170802_balancewheel;
 
 
 import android.content.Context;
+import android.icu.util.Calendar;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,8 +18,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import java.util.Locale;
 
 
 /**
@@ -26,10 +31,12 @@ import android.widget.ToggleButton;
 public class DashboardFragment extends Fragment implements View.OnClickListener{
 
     private Context context;
+    private Calendar calendar;
 
     private Toolbar toolbar;
     private ToggleButton btn_tracker;
     private ToggleButton btn_calendar;
+    private TextView date;
     private Fragment[] dashboard=new Fragment[3];
 
     public DashboardFragment() {
@@ -41,6 +48,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener{
         dashboard[0]=new TrackerOpenFragment(context);
         dashboard[1]=new DashboardListFragment(context);
         dashboard[2]=new CalendarFragment(context);
+     
     }
 
     @Override
@@ -60,6 +68,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener{
         btn_calendar=view.findViewById(R.id.btn_calendar);
         btn_tracker.setOnClickListener(this);
         btn_calendar.setOnClickListener(this);
+
 
         //TODO : DATE
 

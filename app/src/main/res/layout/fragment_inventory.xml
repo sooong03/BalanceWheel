@@ -82,6 +82,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    android:id="@+id/view_inven_tracker_all"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -120,6 +121,7 @@
             >
 
             <LinearLayout
+                android:id="@+id/btn_level"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -142,6 +144,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btn_storage"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -162,6 +165,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btn_event"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

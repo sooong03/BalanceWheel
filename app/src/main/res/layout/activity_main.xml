@@ -19,35 +19,43 @@
     <android.support.design.widget.TabLayout
         android:id="@+id/layout_tab"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/ic_48dp"
-        app:tabGravity="fill"
+        android:layout_height="@dimen/ic_56dp"
+        app:tabTextColor="@color/myColorText"
+        app:tabSelectedTextColor="@color/myColorAccent"
         app:tabMode="fixed"
         app:tabIndicatorHeight="0dp"
+        app:tabMinWidth="80dp"
         >
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:text="@string/menu_navi_dashboard"
             android:icon="@drawable/ic_navi_dashboard"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/menu_navi_share_list"
             android:icon="@drawable/ic_navi_globe"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/menu_navi_add_content"
             android:icon="@drawable/ic_navi_edit"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/menu_navi_inventory"
             android:icon="@drawable/ic_navi_inventory"
             />
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_navi_setting"
+            android:text="@string/menu_navi_setting"
+            android:icon="@drawable/ic_navi_more"
             />
     </android.support.design.widget.TabLayout>
 

@@ -31,8 +31,12 @@
         <activity
             android:name=".SharedItemActivity"
             android:theme="@style/MyAppTheme.NoActionBar" />
-        <activity android:name=".AddContentActivity"
-            android:theme="@style/MyAppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".AddContentActivity"
+            android:theme="@style/MyAppTheme.NoActionBar" />
+        <activity android:name=".LevelActivity" />
+        <activity android:name=".StorageActivity" />
+        <activity android:name=".EventActivity"></activity>
     </application>
 
 </manifest>
