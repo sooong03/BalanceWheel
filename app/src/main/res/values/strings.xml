@@ -1,4 +1,7 @@
 <resources>
+
+    <string name="server_client_id">280185579702-c7vm7ulhpqoka0mn1nodbs1i3c005r8r.apps.googleusercontent.com</string>
+
     <string name="app_name">Balance\nWheel</string>
     <string name="app_maker">MANIA FACTORY</string>
 
