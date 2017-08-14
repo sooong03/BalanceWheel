@@ -13,6 +13,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,17 +24,13 @@ import android.widget.TextView;
 public class SettingFragment extends Fragment {
 
     private Context context;
+    private ArrayList<String> list;
 
-//    private RecyclerView recyclerView;
-//    private SettingListAdapter_R adapter;
-//    private SettingListAdapter adapter;
-    private ListView listView;
-
+    private RecyclerView recyclerView;
+    private SettingListAdapter adapter;
 
     public SettingFragment(Context context) {
         this.context=context;
-        // Required empty public constructor
-//        adapter=new SettingListAdapter_R();
     }
 
 
@@ -38,12 +38,34 @@ public class SettingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_setting, container, false);
-        listView=view.findViewById(R.id.list_setting);
-        listView.setItemsCanFocus(true);
-        listView.setFocusable(false);
-        listView.setClickable(false);
-//        recyclerView=view.findViewById(R.id.view_setting_recycler);
-//        recyclerView.setAdapter(adapter);
+
+        List<String> list=null;
+
+        // TODO : ArrayList<List<String>> lists
+        // lists.get(i) return VIEW_TYPE_HEADLINE;
+        // lists.get(i).get(j) return VIEW_TYPE_SWITCH;
+
+        recyclerView=view.findViewById(R.id.view_setting_account);
+        recyclerView.setVerticalScrollBarEnabled(false);
+        list=new ArrayList<String>(Arrays.asList(context.getResources().getStringArray(R.array.set_account)));
+//        list= (ArrayList<String>) Arrays.asList(context.getResources().getStringArray(R.array.set_account));
+        adapter=new SettingListAdapter(context, (ArrayList<String>) list);
+        recyclerView.setAdapter(adapter);
+
+        recyclerView=view.findViewById(R.id.view_setting_display);
+        list= new ArrayList<String>(Arrays.asList(context.getResources().getStringArray(R.array.set_display)));
+        adapter=new SettingListAdapter(context, (ArrayList<String>) list);
+        recyclerView.setAdapter(adapter);
+
+        recyclerView=view.findViewById(R.id.view_setting_content);
+        list= new ArrayList<String>(Arrays.asList(context.getResources().getStringArray(R.array.set_content)));
+        adapter=new SettingListAdapter(context, (ArrayList<String>) list);
+        recyclerView.setAdapter(adapter);
+
+        recyclerView=view.findViewById(R.id.view_setting_admin);
+        list= new ArrayList<String> (Arrays.asList(context.getResources().getStringArray(R.array.set_admin)));
+        adapter=new SettingListAdapter(context, (ArrayList<String>) list);
+        recyclerView.setAdapter(adapter);
 
         return view;
     }

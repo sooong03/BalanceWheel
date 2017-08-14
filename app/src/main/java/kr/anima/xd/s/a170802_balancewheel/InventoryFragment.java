@@ -31,7 +31,7 @@ public class InventoryFragment extends Fragment implements View.OnClickListener{
 
     public InventoryFragment(Context context) {
         // Required empty public constructor
-        adapter=new MissionListAdapter();
+        adapter=new MissionListAdapter(context);
         this.context=context;
     }
 

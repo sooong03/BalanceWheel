@@ -18,22 +18,23 @@
 
 
     <!--Element-->
-    <string name="app_element_1">건강</string>
-    <string name="app_element_2">재정</string>
-    <string name="app_element_3">감정</string>
-    <string name="app_element_4">환경</string>
-    <string name="app_element_5">관계</string>
-    <string name="app_element_6">외면</string>
-    <string name="app_element_7">교육</string>
-    <string name="app_element_8">정신</string>
-    <string name="app_element_9">사업</string>
+    <string name="app_element_health">건강</string>
+    <string name="app_element_finances">재정</string>
+    <string name="app_element_emotional">감정</string>
+    <string name="app_element_environment">환경</string>
+    <string name="app_element_relationships">관계</string>
+    <string name="app_element_appearance">외면</string>
+    <string name="app_element_education">교육</string>
+    <string name="app_element_spirituality">정신</string>
+    <string name="app_element_business">사업</string>
 
     <!--Dashboard Title-->
     <string name="dash_task_today">오늘의 일정</string>
     <string name="dash_task_tomorrow">내일 일정 미리보기</string>
     <string name="dash_task_miss">놓친 일정</string>
-    <string name="dash_check_emotional">기분이 어떠신가요?</string>
-    <string name="dash_check_physical">건강 상태는 어떠신가요?</string>
+    <string name="dash_state_emotional">기분이 어떠신가요?</string>
+    <string name="dash_state_body">건강 상태는 어떠신가요?</string>
+    <string name="dash_state_weather">현재 날씨</string>
 
     <!--My Share List-->
     <string name="share_downloads">공유받은 일정</string>

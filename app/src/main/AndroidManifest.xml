@@ -36,7 +36,11 @@
             android:theme="@style/MyAppTheme.NoActionBar" />
         <activity android:name=".LevelActivity" />
         <activity android:name=".StorageActivity" />
-        <activity android:name=".EventActivity"></activity>
+        <activity android:name=".EventActivity" />
+        <activity android:name=".MissionDetailActivity"
+            android:theme="@style/MyAppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

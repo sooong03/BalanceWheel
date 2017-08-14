@@ -6,13 +6,14 @@
     android:layout_height="@dimen/ic_48dp"
     android:gravity="fill_horizontal"
     android:paddingLeft="@dimen/_16dp"
-    android:paddingRight="@dimen/_16dp">
+    android:paddingRight="@dimen/_16dp"
+    android:paddingTop="@dimen/_4dp"
+    android:paddingBottom="@dimen/_4dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/txt_mission_title"
             android:layout_width="wrap_content"
@@ -22,18 +23,19 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:id="@+id/txt_num_task"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/inven_num_task"
             android:textSize="@dimen/typo_headline_sub"
-            android:textStyle="bold"/>
+            android:paddingLeft="@dimen/_16dp"/>
     </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:src="@mipmap/ic_launcher"
-        android:scaleType="centerCrop"
+        android:scaleType="centerInside"
         android:layout_toLeftOf="@+id/img_next"
         android:layout_marginRight="@dimen/_16dp"/>
 
@@ -42,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:srcCompat="@drawable/ic_mbri_arrow_next"
-        android:scaleType="centerCrop"
+        android:scaleType="centerInside"
         android:layout_alignParentRight="true"/>
 
 

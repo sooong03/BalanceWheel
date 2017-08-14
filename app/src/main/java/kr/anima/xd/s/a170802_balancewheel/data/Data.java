@@ -13,10 +13,11 @@ import kr.anima.xd.s.a170802_balancewheel.R;
 
 public class Data extends AppCompatActivity{
 
-    String title; // 미션명
+    String Name; // 미션명
     ArrayList<Element> elements=new ArrayList<>(); // 요소와 각 요소의 해당여부
 
     public Data() {
+        // TODO : xml
         elements.add(new Element("건강", true));
         elements.add(new Element("재정", true));
         elements.add(new Element("환경", true));
