@@ -16,6 +16,7 @@ public class InventoryFragment extends Fragment {
 
     public InventoryFragment() {
         // Required empty public constructor
+//        fot test
     }
 
 
